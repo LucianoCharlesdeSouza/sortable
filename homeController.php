@@ -16,6 +16,10 @@ class homeController extends Controller
         $usuarios = $_POST["usuarios"];
         $pos = 0;
 
+        /**
+        * public static function ordenar($pos, $id_user) {
+        * $Query = UPDATE usuarios SET ordem = :pos WHERE id = :id";        
+        */
         foreach ($usuarios as $users) {
             Usuarios::ordenar($pos, $users);
             $pos++;
