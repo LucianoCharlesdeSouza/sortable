@@ -1,4 +1,8 @@
 <?php
+
+class homeController extends Controller
+{
+
     public function sortable() {
         $dados = [];
 
@@ -31,4 +35,5 @@
 
         echo json_encode($dados);
         exit();
-    }
+      }
+}
