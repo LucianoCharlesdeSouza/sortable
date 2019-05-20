@@ -44,3 +44,5 @@
         }
     }
     echo '</div>';
+
+    require_once('script.js);
