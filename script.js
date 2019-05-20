@@ -1,19 +1,19 @@
 $("#sortable").sortable({
+
         update: function() {
-            var lista = $('#sortable').sortable('toArray');
+
+            let list_ids = $('#sortable').sortable('toArray');
+
             $.ajax({
-                url: "http://localhost/seuprojeto/home/ordersortable",
-                data: {usuarios: lista},
+                url: "http://localhost/sortable/recebePostSortable.php",
+                data: {id_users: list_ids},
                 type: 'POST',
                 dataType: 'json',
-                beforeSend: function(data) {
-
-                },
                 success: function(data) {
-                    if (data.retorno) {
-                        $("#sortable").html(data.retorno);
+                    
+                    if (data.return) {
+                        $("#sortable").html(data.return);
                     }
-
                 }
 
             });
