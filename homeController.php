@@ -5,7 +5,7 @@
         $Query = "SELECT * FROM usuarios ORDER BY ordem";
         $dados['lista_user'] = Usuarios::FullRead($Query);
 
-        $this->loadTemplate("sortable/sortable", $dados);
+        $this->loadTemplate("sortable", $dados);
     }
 
     public function ordersortable() {
